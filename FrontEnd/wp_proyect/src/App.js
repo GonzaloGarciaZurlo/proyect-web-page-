@@ -5,6 +5,7 @@ import Login from './components/login/Login';
 import Logout from './components/login/Logout';
 import Navbar from "./components/navbar/navbar"
 import VerifyUser from './components/user/VerifyUser';
+import CreateChat from './components/chat/CreateChat'
 import {
   BrowserRouter as Router,
   Routes,
@@ -21,6 +22,7 @@ function App() {
         <Route path="/create_user" element={<CreateUser />} />
         <Route path="/logout" element={<RequireToken><Logout /></RequireToken>} />
         <Route path="/verify_user" element={<VerifyUser />} />
+        <Route path="/create_chat" element={<RequireToken><CreateChat /></RequireToken>} />
       </Routes>
     </Router>
   );

@@ -25,6 +25,7 @@ encoded2 = encoded_jwt2.decode("utf-8")
 
 
 # test create user
+
 def test_create_user():
     response = client.post(
         '/create_user',

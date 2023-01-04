@@ -19,6 +19,9 @@ function Navbar() {
             <li className="nav-item active">
               <Link className="nav-link my-link-light" to="/logout">Logout</Link>
             </li>
+            <li className="nav-item active">
+              <Link className="nav-link my-link-light" to="/create_chat">Create Chat</Link>
+            </li>
           </ul>
         </div>
       </div>

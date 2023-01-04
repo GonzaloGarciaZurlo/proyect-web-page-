@@ -8,9 +8,9 @@ from fastapi_mail import FastMail, MessageSchema, ConnectionConfig, MessageType
 import random
 
 conf = ConnectionConfig(
-    MAIL_USERNAME = "pyrobotsok@gmail.com",
-    MAIL_PASSWORD = "qxdevnpfcerygkqp",
-    MAIL_FROM = "pyrobotsok@gmail.com",
+    MAIL_USERNAME = "wpproyect2@gmail.com",
+    MAIL_PASSWORD = "astefetvpmuwwmia",
+    MAIL_FROM = "wpproyect2@gmail.com",
     MAIL_PORT = 587,
     MAIL_SERVER = "smtp.gmail.com",
     MAIL_FROM_NAME="Verification Code",
@@ -27,8 +27,6 @@ class signUpModel(BaseModel):
     email: str
     password: str
     avatar: str
-
-
 
 @router.post('/create_user')
 async def signup(user: signUpModel):
@@ -58,7 +56,7 @@ async def signup(user: signUpModel):
         list_emails =[]
         list_emails.append(email_s1)
         message = MessageSchema(
-            subject="Fastapi-Mail module",
+            subject="Verification Code",
             recipients=list_emails,
             body=html,
             subtype=MessageType.html)
